@@ -1,0 +1,19 @@
+.button-menu{
+    border: none !important ;
+    box-shadow: none !important;
+    color:#004F2C ;
+}
+
+.button-menu::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #004F2C;
+    transition: width .3s;
+}
+
+.button-menu:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
