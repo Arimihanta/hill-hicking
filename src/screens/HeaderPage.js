@@ -74,13 +74,13 @@ export const HeaderPage = (props) => {
                     <Space size={7} style={{ float: "right" }}>
                         <Button className="button-menu">
                             <Link to="/">
-                                <LineChartOutlined style={{ color: primaryDarkColor }} /> Tableau de bord
+                                <LineChartOutlined style={{ color: primaryDarkColor }} /> Accueil
                             </Link>
                         </Button>
                         <Dropdown className="button-menu" overlay={menuMenage} placement="bottomLeft" arrow>
                             <Button>
                                 <HomeOutlined style={{ color: primaryDarkColor }} />
-                                Menages
+                                Endroits
                             </Button>
                         </Dropdown>
                         {/*<Dropdown overlay={menuIndividue} placement="bottomLeft" arrow>
@@ -95,6 +95,11 @@ export const HeaderPage = (props) => {
                                 Subventions
                             </Button>
                         </Dropdown>
+                        <Button className="button-menu">
+                            <Link to="/">
+                                <LineChartOutlined style={{ color: primaryDarkColor }} /> Contacts
+                            </Link>
+                        </Button>
                     </Space>
                 </div>
             </Header>
