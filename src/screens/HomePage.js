@@ -1,9 +1,13 @@
 import { Carousel,Typography , Row, Col} from 'antd';
+import {
+    TeamOutlined
+} from "@ant-design/icons"
+import { colors } from "../global/colors"
 import img20191021_090541 from './../assets/photo/ambodirano/20191021_090541.jpg'
 import img20191021_105312 from './../assets/photo/ambodirano/20191021_105312.jpg'
 import img20200130_101349 from './../assets/photo/avaradrano/20200130_101349.jpg'
 import img20200124_142938 from './../assets/photo/vakinisisaony/20200124_142938.jpg'
-
+const { primaryColor, primaryDarkColor, bodyColor } = colors
 
 const { Title } = Typography;
 export const HomePage=()=>{
@@ -69,8 +73,16 @@ export const HomePage=()=>{
                 }}
                 >
                 <Col md={12}>
-                    <div className="fl-node-content">
-                        <Title level={3}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </Title>
+                    <div className="fl-desc-group-content">
+                        <TeamOutlined 
+                            style={{ 
+                                color: primaryDarkColor,
+                                fontSize:80,
+                                margin:10
+                            }} 
+                            
+                            />
+                        <Title level={4}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </Title>
                     </div>
                 </Col>
                 <Col md={12} justify="center">
