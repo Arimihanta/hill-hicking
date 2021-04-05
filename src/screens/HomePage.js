@@ -7,7 +7,7 @@ import img20191021_090541 from './../assets/photo/ambodirano/20191021_090541.jpg
 import img20191021_105312 from './../assets/photo/ambodirano/20191021_105312.jpg'
 import img20200130_101349 from './../assets/photo/avaradrano/20200130_101349.jpg'
 import img20200124_142938 from './../assets/photo/vakinisisaony/20200124_142938.jpg'
-const { primaryColor, primaryDarkColor, bodyColor } = colors
+const { primaryDarkColor } = colors
 
 const { Title } = Typography;
 export const HomePage=()=>{
