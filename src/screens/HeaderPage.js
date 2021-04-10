@@ -1,9 +1,8 @@
-import { Layout, Menu, Button, Dropdown, Space } from "antd"
+import { Layout,  Button,Space } from "antd"
 import { colors } from "../global/colors"
 import {
     //UserOutlined,
-    LineChartOutlined,
-    DollarCircleOutlined
+    LineChartOutlined
 } from "@ant-design/icons"
 import { Link } from "react-router-dom"
 
