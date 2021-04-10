@@ -1,21 +1,12 @@
-import { Carousel,Typography , Row, Col,Card } from 'antd';
-import {
-    TeamOutlined
-} from "@ant-design/icons"
-import { colors } from "../global/colors"
-
+import { Row, Col,Card } from 'antd';
 
 //image
 import img20191021_090541 from './../assets/photo/ambodirano/20191021_090541.jpg'
-import img20191021_105312 from './../assets/photo/ambodirano/20191021_105312.jpg'
-import img20200130_101349 from './../assets/photo/avaradrano/20200130_101349.jpg'
 import img20200124_142938 from './../assets/photo/vakinisisaony/20200124_142938.jpg'
 import Ambohimanga from './../assets/photo/tana/Ambohimanga.jpg'
 import Anosy from './../assets/photo/tana/Anosy.jpg'
 import Manjakamiadana from './../assets/photo/tana/Rova.jpg'
-const { primaryDarkColor } = colors
 const { Meta } = Card;
-const { Title } = Typography;
 
 const data=[
     {

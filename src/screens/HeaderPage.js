@@ -3,34 +3,13 @@ import { colors } from "../global/colors"
 import {
     //UserOutlined,
     LineChartOutlined,
-    HomeOutlined,
     DollarCircleOutlined
 } from "@ant-design/icons"
 import { Link } from "react-router-dom"
 
 const { Header } = Layout
 const { primaryColor, primaryDarkColor, bodyColor } = colors
-const menuMenage = (
-    <Menu>
-        <Menu.Item>
-            <Link to="/Menage/">Ajout de menage</Link>
-        </Menu.Item>
-        <Menu.Item>
-            <Link to="/Menage/members">Lister menage</Link>
-        </Menu.Item>
-    </Menu>
-)
 
-const menuSubvention = (
-    <Menu>
-        <Menu.Item>
-            <Link to="/Subvention/">Nouvelle</Link>
-        </Menu.Item>
-        <Menu.Item>
-            <Link to="/Subvention/distribution">Distribuer</Link>
-        </Menu.Item>
-    </Menu>
-)
 export const HeaderPage = (props) => {
     return (
         <div style={{ marginTop: "0px" }}>
@@ -87,12 +66,6 @@ export const HeaderPage = (props) => {
                                 <LineChartOutlined style={{ color: primaryDarkColor }} /> Meilleures photos
                             </Link>
                         </Button>
-                        <Dropdown className="button-menu" overlay={menuSubvention} placement="bottomLeft" arrow>
-                            <Button>
-                                <DollarCircleOutlined style={{ color: primaryDarkColor }} />
-                                Subventions
-                            </Button>
-                        </Dropdown>
                         <Button className="button-menu">
                             <Link to="/">
                                 <LineChartOutlined style={{ color: primaryDarkColor }} /> Contacts
