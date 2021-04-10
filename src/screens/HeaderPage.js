@@ -77,18 +77,16 @@ export const HeaderPage = (props) => {
                                 <LineChartOutlined style={{ color: primaryDarkColor }} /> Accueil
                             </Link>
                         </Button>
-                        <Dropdown className="button-menu" overlay={menuMenage} placement="bottomLeft" arrow>
-                            <Button>
-                                <HomeOutlined style={{ color: primaryDarkColor }} />
-                                Endroits
-                            </Button>
-                        </Dropdown>
-                        {/*<Dropdown overlay={menuIndividue} placement="bottomLeft" arrow>
-                            <Button>
-                                <UserOutlined style={{ color: violet }} />
-                                Individus
-                            </Button>
-                        </Dropdown>*/}
+                        <Button className="button-menu">
+                            <Link to="/trail-guide">
+                                <LineChartOutlined style={{ color: primaryDarkColor }} /> Guide des sentiers
+                            </Link>
+                        </Button>
+                        <Button className="button-menu">
+                            <Link to="/services">
+                                <LineChartOutlined style={{ color: primaryDarkColor }} /> Meilleures photos
+                            </Link>
+                        </Button>
                         <Dropdown className="button-menu" overlay={menuSubvention} placement="bottomLeft" arrow>
                             <Button>
                                 <DollarCircleOutlined style={{ color: primaryDarkColor }} />
