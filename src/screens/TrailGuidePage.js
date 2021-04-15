@@ -1,4 +1,6 @@
-import { Row, Col,Card } from 'antd';
+import React,{ useState } from 'react'
+import { Row, Col,Card,Form, Input } from 'antd'
+import {SearchOutlined} from '@ant-design/icons'
 
 //image
 import img20191021_090541 from './../assets/photo/ambodirano/20191021_090541.jpg'
@@ -41,11 +43,31 @@ const data=[
     }
 ]
 export const TrailGuidePage=()=>{
+    const [data_filtered, setData]=useState(data)
+
+    const onSearch=(e)=>{
+        setData(data.filter(item=>item.nom.toUpperCase().includes(e.target.value.toUpperCase()))
+        )
+    }
     return(
         <div className="main-container">
+            <Row justify="end"
+            >
+                <Col span={6}>
+                    <Form.Item name="search">
+                        <Input 
+                            size="middle" 
+                            placeholder="Rechercher"
+                            onChange={onSearch} 
+                            prefix={<SearchOutlined />} 
+                            style={{borderRadius:25}}
+                            />
+                    </Form.Item>
+                </Col>
+            </Row>
             <Row gutter={[16, 24]}>
                 {
-                    data.map((item,key)=>
+                    data_filtered.map((item,key)=>
                         <Col key={key} className="gutter-row" span={6}>
                             <Card
                                 hoverable

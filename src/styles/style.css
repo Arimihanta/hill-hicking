@@ -1,6 +1,7 @@
 .main-container{
   margin-left: 100px;
   margin-right:100px ;
+  padding-top:12vh ;
 }
 .fl-node-content{
     margin-left:200px ;
@@ -106,4 +107,23 @@
 .img-best-photo{
   height:150px ;
   object-fit: cover;
+}
+.card-best-img .ant-card-body {
+  padding : 10px !important ;
+}
+
+.card-best-img .ant-card-body .ant-card-meta .ant-card-meta-detail .ant-card-meta-title{
+  color:#004F2C ;
+}
+@media(min-width:1024px){
+  .card-best-img .ant-card-body .ant-card-meta .ant-card-meta-detail .ant-card-meta-title{
+    color:#004F2C ;
+    font-size:14px !important;
+  }
+}
+@media(max-width:1023px){
+  .card-best-img .ant-card-body .ant-card-meta .ant-card-meta-detail .ant-card-meta-title{
+    color:#004F2C ;
+    font-size:10px !important;
+  }
 }
