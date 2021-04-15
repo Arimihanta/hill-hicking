@@ -1,7 +1,6 @@
 import React,{ useState } from 'react'
 import { Row, Col,Card,Image,Form, Input,Typography  } from 'antd';
 import {SearchOutlined} from '@ant-design/icons';
-import { colors } from "../global/colors"
 //image
 import img20191021_090541 from './../assets/photo/ambodirano/20191021_090541.jpg'
 import img20200124_142938 from './../assets/photo/vakinisisaony/20200124_142938.jpg'
@@ -10,7 +9,6 @@ import Anosy from './../assets/photo/tana/Anosy.jpg'
 import Manjakamiadana from './../assets/photo/tana/Rova.jpg'
 const { Meta } = Card
 const { Title } = Typography
-const { primaryColor, primaryDarkColor, bodyColor } = colors
 
 const images_data=[
     {
