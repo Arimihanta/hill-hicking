@@ -61,7 +61,7 @@ export const HeaderPage = (props) => {
                             </Link>
                         </Button>
                         <Button className="button-menu">
-                            <Link to="/services">
+                            <Link to="/photos">
                                 <LineChartOutlined style={{ color: primaryDarkColor }} /> Meilleures photos
                             </Link>
                         </Button>

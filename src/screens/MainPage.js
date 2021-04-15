@@ -7,6 +7,7 @@ import {
 import {HeaderPage} from './HeaderPage'
 import {HomePage} from './HomePage'
 import {TrailGuidePage} from './TrailGuidePage'
+import {BestPhotoPage} from './BestPhotoPage'
 export const MainPage=()=>{
     return(
         <Router>
@@ -14,6 +15,9 @@ export const MainPage=()=>{
             <Switch>
                 <Route path="/trail-guide">
                     <TrailGuidePage/>
+                </Route>
+                <Route path="/photos">
+                    <BestPhotoPage/>
                 </Route>
                 <Route path="/">
                     <HomePage/>
