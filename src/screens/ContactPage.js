@@ -1,5 +1,5 @@
 import React,{ useState } from 'react'
-import { Row, Col,,Form, Input,Typography  } from 'antd';
+import { Row, Col,Form, Input,Typography  } from 'antd';
 import {Button as AButton} from '../components/Button'
 import emailjs from 'emailjs-com';
 const { Title, Text } = Typography
