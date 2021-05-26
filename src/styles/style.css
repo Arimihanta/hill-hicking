@@ -110,6 +110,7 @@
 }
 .card-best-img .ant-card-body {
   padding : 10px !important ;
+  background-size: contain;
 }
 
 .card-best-img .ant-card-body .ant-card-meta .ant-card-meta-detail .ant-card-meta-title{

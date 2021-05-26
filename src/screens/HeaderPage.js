@@ -1,8 +1,10 @@
 import { Layout,  Button,Space } from "antd"
 import { colors } from "../global/colors"
 import {
-    //UserOutlined,
-    LineChartOutlined
+    HomeOutlined,
+    ContactsOutlined,
+    PictureOutlined,
+    EnvironmentOutlined
 } from "@ant-design/icons"
 import { Link } from "react-router-dom"
 
@@ -51,22 +53,22 @@ export const HeaderPage = (props) => {
                 <Space size={7} style={{ float: "right" }}>
                     <Button className="button-menu">
                         <Link to="/">
-                            <LineChartOutlined style={{ color: primaryDarkColor }} /> Accueil
+                            <HomeOutlined style={{ color: primaryDarkColor }} /> Accueil
                         </Link>
                     </Button>
                     <Button className="button-menu">
                         <Link to="/trail-guide">
-                            <LineChartOutlined style={{ color: primaryDarkColor }} /> Guide des sentiers
+                            <EnvironmentOutlined style={{ color: primaryDarkColor }} /> Guide des sentiers
                         </Link>
                     </Button>
                     <Button className="button-menu">
                         <Link to="/photos">
-                            <LineChartOutlined style={{ color: primaryDarkColor }} /> Meilleures photos
+                            <PictureOutlined style={{ color: primaryDarkColor }} /> Meilleures photos
                         </Link>
                     </Button>
                     <Button className="button-menu">
                         <Link to="/contact">
-                            <LineChartOutlined style={{ color: primaryDarkColor }} /> Contacts
+                            <ContactsOutlined style={{ color: primaryDarkColor }} /> Contacts
                         </Link>
                     </Button>
                 </Space>
