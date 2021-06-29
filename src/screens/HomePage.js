@@ -2,6 +2,7 @@ import { Carousel,Typography , Row, Col} from 'antd';
 import {
     TeamOutlined
 } from "@ant-design/icons"
+import {FooterPage} from './FooterPage'
 import { colors } from "../global/colors"
 import img20191021_090541 from './../assets/photo/ambodirano/20191021_090541.jpg'
 import img20191021_105312 from './../assets/photo/ambodirano/20191021_105312.jpg'
@@ -98,6 +99,7 @@ export const HomePage=()=>{
                     </div>
                 </Col>
             </Row>
+            <FooterPage/>
         </div>
     )
 }

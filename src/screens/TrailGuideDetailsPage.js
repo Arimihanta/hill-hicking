@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom"
 import { Row, Col, Card, Typography } from 'antd'
 import { EnvironmentOutlined } from '@ant-design/icons'
 import { colors } from "../global/colors"
+import {FooterPage} from './FooterPage'
 import ReactMapGL, {Marker} from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
@@ -92,6 +93,7 @@ export const TrailGuideDetailsPage = (props) => {
     
     const [viewport, setViewport] = React.useState(data.coordinates);
     return (
+        <div>
         <div className="main-container">
             <Row>
                 <Col md={10}>
@@ -140,6 +142,8 @@ export const TrailGuideDetailsPage = (props) => {
                     </div>
                 </Col>
             </Row>
+            </div>
+            <FooterPage />
         </div>
     )
 }

@@ -62,6 +62,11 @@ export const HeaderPage = (props) => {
                         </Link>
                     </Button>
                     <Button className="button-menu">
+                        <Link to="/circuts">
+                            <EnvironmentOutlined style={{ color: primaryDarkColor }} /> Circuits
+                        </Link>
+                    </Button>
+                    <Button className="button-menu">
                         <Link to="/photos">
                             <PictureOutlined style={{ color: primaryDarkColor }} /> Meilleures photos
                         </Link>

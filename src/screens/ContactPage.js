@@ -1,6 +1,7 @@
 import React,{ useState } from 'react'
 import { Row, Col,Form, Input,Typography  } from 'antd';
-import {Button as AButton} from '../components/Button'
+import { Button as AButton } from '../components/Button'
+import {FooterPage} from './FooterPage'
 import emailjs from 'emailjs-com';
 const { Title, Text } = Typography
 const { TextArea } = Input;
@@ -61,7 +62,8 @@ export const ContactPage=()=>{
         setSubject('')
         setMessage('')
     }
-    return(
+    return (
+        <div>
         <div className="main-container">
             <Row>
                 <Col span={24}>
@@ -158,6 +160,9 @@ export const ContactPage=()=>{
                     </Row>
                 </Col>
             </Row>
-        </div>
+            
+            </div>
+            <FooterPage />
+            </div>
     )
 }

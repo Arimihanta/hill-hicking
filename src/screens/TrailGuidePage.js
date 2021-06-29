@@ -1,6 +1,7 @@
 import React,{ useState } from 'react'
 import { Row, Col,Card,Form, Input } from 'antd'
 import { SearchOutlined } from '@ant-design/icons'
+import {FooterPage} from './FooterPage'
 import { Link,useRouteMatch  } from "react-router-dom"
 
 //image
@@ -57,7 +58,8 @@ export const TrailGuidePage = () => {
         setData(data.filter(item=>item.nom.toUpperCase().includes(e.target.value.toUpperCase()))
         )
     }
-    return(
+    return (
+        <div>
         <div className="main-container">
             <Row justify="end"
             >
@@ -91,6 +93,8 @@ export const TrailGuidePage = () => {
                     )
                 }
             </Row>
+            </div>
+            <FooterPage/>
         </div>
     )
 }

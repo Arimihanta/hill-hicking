@@ -1,6 +1,7 @@
 import React,{ useState } from 'react'
 import { Row, Col,Card,Image,Form, Input,Typography  } from 'antd';
-import {SearchOutlined} from '@ant-design/icons';
+import { SearchOutlined } from '@ant-design/icons';
+import {FooterPage} from './FooterPage'
 //image
 import img20191021_090541 from './../assets/photo/ambodirano/20191021_090541.jpg'
 import img20200124_142938 from './../assets/photo/vakinisisaony/20200124_142938.jpg'
@@ -109,7 +110,8 @@ export const BestPhotoPage=()=>{
         setData(images_data.filter(item=>item.title.toUpperCase().includes(e.target.value.toUpperCase()))
         )
     }
-    return(
+    return (
+        <div>
         <div className="main-container">
             <Row justify="end"
             >
@@ -160,6 +162,8 @@ export const BestPhotoPage=()=>{
                     )
                 }
             </div>
+        </div>
+        <FooterPage/>
         </div>
     )
 }

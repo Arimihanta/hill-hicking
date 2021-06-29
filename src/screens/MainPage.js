@@ -6,7 +6,6 @@ import {
 } from "react-router-dom";
 import {HeaderPage} from './HeaderPage'
 import { HomePage } from './HomePage'
-import {FooterPage} from './FooterPage'
 import { TrailGuidePage } from './TrailGuidePage'
 import { TrailGuideDetailsPage } from './TrailGuideDetailsPage'
 import {BestPhotoPage} from './BestPhotoPage'
@@ -32,7 +31,6 @@ export const MainPage=()=>{
                     <HomePage/>
                 </Route>
             </Switch>
-            <FooterPage/>
         </Router>
     )
 }
