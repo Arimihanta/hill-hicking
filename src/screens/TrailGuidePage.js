@@ -1,27 +1,30 @@
 import React,{ useState } from 'react'
-import { Row, Col,Card,Form, Input } from 'antd'
+import { Row, Col,Card,Form, Input, Typography } from 'antd'
 import { SearchOutlined } from '@ant-design/icons'
 import {FooterPage} from './FooterPage'
 import { Link,useRouteMatch  } from "react-router-dom"
+import { WarningOutlined } from '@ant-design/icons'
 
 //image
+import img20191021_105312 from '../assets/photo/ambodirano/20191021_105312.jpg'
 import img20191021_090541 from './../assets/photo/ambodirano/20191021_090541.jpg'
 import img20200124_142938 from './../assets/photo/vakinisisaony/20200124_142938.jpg'
 import Ambohimanga from './../assets/photo/tana/Ambohimanga.jpg'
 import Anosy from './../assets/photo/tana/Anosy.jpg'
 import Manjakamiadana from './../assets/photo/tana/Rova.jpg'
 const { Meta } = Card;
+const {Title}=Typography
 
 const data=[
     {
         id:12526,
-        nom:"Ambodirano",
+        nom:"La colline sacrée d'Antsahadinta.",
         img:img20191021_090541,
-        description:"Situé au sud du Marovatana, avec pour capitale Fenoarivobe du district de Fenoarivobe."
+        description:"Située de l'autre coté de la plaine à l'ouest d'Antananarivo, dominant la vallée de la Sisaony, Antsahadinta fait partie des douze collines sacrées de l'Imerina avec Androhibe juste à proximité."
     },
     {
         id:12527,
-        nom:"Ambohimanga",
+        nom:"La Colline Royale d’Ambohimanga.",
         img:Ambohimanga,
         description:"La colline à Madagascar, située approximativement à 24 km au nord-est de la capitale Antananarivo, sur laquelle est établie une place forte royale traditionnelle."
     },
@@ -32,22 +35,10 @@ const data=[
         description:"C'est un lac artificiel dans la partie sud de la capitale de Madagascar, Antananarivo, à environ 2 km au sud de la Hauteville."
     },
     {
-        id:12016,
-        nom:"Avaradrano",
-        img:img20191021_090541,
-        description:""
-    },
-    {
         id:12400,
         nom:"Manjakamiadana",
         img:Manjakamiadana,
         description:"Le palais de la Reine qui est l'ancienne demeure officielle des souverains de Madagascar au xixe siècle."
-    },
-    {
-        id:17326,
-        nom:"Vakinisisaony",
-        img:img20200124_142938,
-        description:"Au sud de l'Avaradrano, avec pour capitale Alasora et ensuite Andramasina."
     }
 ]
 export const TrailGuidePage = () => {
@@ -77,6 +68,7 @@ export const TrailGuidePage = () => {
             </Row>
             <Row gutter={[16, 24]}>
                 {
+                    data_filtered.length>0?
                     data_filtered.map((item,key)=>
                         <Col key={key} className="gutter-row" span={6}>
                             <Link to={`${match.path}/${item.id}`}>
@@ -90,7 +82,16 @@ export const TrailGuidePage = () => {
                                 </Card>
                             </Link>
                         </Col>
-                    )
+                    ):<div
+                    style={{
+                        width:'100%',
+                        float:'left'
+                    }}
+                >
+                    <Title
+                        level={5}
+                    ><WarningOutlined style={{ color: '#ff2525', marginRight:20 }}/>Pas d'information disponible.</Title>
+                </div>
                 }
             </Row>
             </div>

@@ -18,55 +18,44 @@ export const FooterPage = (props) => {
             style={{
                 background: primaryColor,
                 zIndex: "10",
-                marginTop:"40px",
                 width: "100%",
                 height:"250px",
                 borderBottom: "1px solid #f0f0f0"
             }}
         >
             <div
-                className="logo"
-                style={{ color: primaryColor, fontWeight: "bold", display: "inline-block", fontSize: "18px" }}
-            >
-                Hill{" "}
-                <span
-                    style={{
-                        backgroundColor: "white",
-                        borderRadius: "5px",
-                        padding: 4,
-                        fontWeight: "bold",
-                        color: "black"
-                    }}
-                >
-                    Hicking
-                </span>
-            </div>
-            <div
                 style={{
-                    float: "right",
                     height: "62px",
                     color: "white",
                     display: "inline-block",
-                    fontWeight: "bold"
+                    fontWeight: "bold",
+                    alignContent:"center",
+                    displayContent:"center",
+                    
                 }}
             >
                 <Space size={7} style={{ float: "right" }}>
-                    <Button className="button-menu">
+                    <Button className="button-menu footer">
                         <Link to="/">
                             <HomeOutlined style={{ color: primaryDarkColor }} /> Accueil
                         </Link>
                     </Button>
-                    <Button className="button-menu">
+                    <Button className="button-menu footer">
                         <Link to="/trail-guide">
                             <EnvironmentOutlined style={{ color: primaryDarkColor }} /> Guide des sentiers
                         </Link>
                     </Button>
-                    <Button className="button-menu">
+                    <Button className="button-menu footer">
+                        <Link to="/circuits">
+                            <EnvironmentOutlined style={{ color: primaryDarkColor }} /> Circuits
+                        </Link>
+                    </Button>
+                    <Button className="button-menu footer">
                         <Link to="/photos">
                             <PictureOutlined style={{ color: primaryDarkColor }} /> Meilleures photos
                         </Link>
                     </Button>
-                    <Button className="button-menu">
+                    <Button className="button-menu footer">
                         <Link to="/contact">
                             <ContactsOutlined style={{ color: primaryDarkColor }} /> Contacts
                         </Link>

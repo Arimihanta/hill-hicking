@@ -1,6 +1,6 @@
 import React,{ useState } from 'react'
 import { Row, Col,Card,Image,Form, Input,Typography  } from 'antd';
-import { SearchOutlined } from '@ant-design/icons';
+import { SearchOutlined, WarningOutlined } from '@ant-design/icons';
 import {FooterPage} from './FooterPage'
 //image
 import img20191021_090541 from './../assets/photo/ambodirano/20191021_090541.jpg'
@@ -129,6 +129,7 @@ export const BestPhotoPage=()=>{
             </Row>
             <div>
                 {
+                    data_filtered.length>0?
                     data_filtered.map((item,key)=>
                         <Row>
                             <Col span={24}>
@@ -159,7 +160,16 @@ export const BestPhotoPage=()=>{
                                 </Row>
                             </Col>
                         </Row>
-                    )
+                    ):<div
+                    style={{
+                        width:'100%',
+                        float:'left',
+                    }}
+                >
+                    <Title
+                        level={5}
+                    ><WarningOutlined style={{ color: '#ff2525', marginRight:20 }}/>Pas d'information disponible.</Title>
+                </div>
                 }
             </div>
         </div>

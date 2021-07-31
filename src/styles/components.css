@@ -1,6 +1,7 @@
 .button-menu{
     border: none !important ;
     box-shadow: none !important;
+    background: transparent !important;
     color:#004F2C ;
 }
 
@@ -16,4 +17,22 @@
 .button-menu:hover::after {
     width: 100%;
     transition: width .3s;
+}
+.button-menu.footer{
+    color:#FFFFFF !important;
+}
+.button-menu.footer::after{
+    background: #022b18 !important;
+    transition: width .3s;
+}
+
+.ant-steps-item-title{
+    font-size: 16px !important;
+    color: #022b18 !important;
+    font:bold !important;
+    font-weight: 700 !important;
+}
+
+.b-rounded{
+    border-radius: 20px !important;
 }

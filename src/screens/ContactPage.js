@@ -2,6 +2,7 @@ import React,{ useState } from 'react'
 import { Row, Col,Form, Input,Typography  } from 'antd';
 import { Button as AButton } from '../components/Button'
 import {FooterPage} from './FooterPage'
+import fond from '../assets/photo/fond/fond_contact.jpg'
 import emailjs from 'emailjs-com';
 const { Title, Text } = Typography
 const { TextArea } = Input;
@@ -64,105 +65,122 @@ export const ContactPage=()=>{
     }
     return (
         <div>
-        <div className="main-container">
-            <Row>
-                <Col span={24}>
-                    <Title 
-                        level={3}
-                        style={{
-                            marginTop:30,
-                            marginBottom:20
-                        }}
-                    >Contact Us</Title>
-                </Col>
-                <Col span={24}>
-                    <Row justify="space-between">
-                        <Col md={12}>
-                            
-                        </Col>
-                        <Col md={12}>
-                            <Form
-                                layout="vertical"
-                                initialValues={{
-                                    remember: true,
+            <div className="contact">
+                <img 
+                        src={fond}
+                        alt="fond" 
+                        className="fond-contact"/>
+                <div className="contact-content">
+                    <Row>
+                        <Col span={24}>
+                            <Title 
+                                level={2}
+                                style={{
+                                    marginTop:30,
+                                    marginBottom:20,
+                                    color:'#fff',
                                 }}
-                            >
-                                <Row justify="space-between">
-                                    <Col md={11}>
+                            >Contact Us</Title>
+                        </Col>
+                        <Col span={24}>
+                            <Row justify="space-between">
+                                <Col md={12}>
+                                    
+                                </Col>
+                                <Col md={12}>
+                                    <Form
+                                        layout="vertical"
+                                        initialValues={{
+                                            remember: true,
+                                        }}
+                                    >
+                                        <Row justify="space-between">
+                                            <Col md={11}>
+                                                <Form.Item
+                                                    rules={[
+                                                        {
+                                                            required: true,
+                                                            message: 'Veuillez entrer le nom',
+                                                        },
+                                                    ]}
+                                                >
+                                                    <Input 
+                                                        size="large" 
+                                                        placeholder="Nom" 
+                                                        className="b-rounded"
+                                                        onChange={onChangeInput}
+                                                        name="first_name"
+                                                        value={first_name}
+                                                        />
+                                                </Form.Item>
+                                            </Col>
+                                            <Col md={11}>
+                                                <Form.Item
+                                                    rules={[
+                                                        {
+                                                            required: true,
+                                                            message: 'Veuillez entrer le prénom(s)',
+                                                        },
+                                                    ]}
+                                                >
+                                                    <Input  
+                                                        className="b-rounded"
+                                                        size="large" placeholder="Prénom" onChange={onChangeInput} name="last_name" value={last_name}/>
+                                                </Form.Item>
+                                            </Col>
+                                        </Row>
                                         <Form.Item
                                             rules={[
                                                 {
                                                     required: true,
-                                                    message: 'Veuillez entrer le nom',
+                                                    message: 'Veuillez entrer votre adresse email',
                                                 },
-                                            ]}
-                                        >
+                                            ]}>
                                             <Input 
+                                                className="b-rounded"
                                                 size="large" 
-                                                placeholder="Nom" 
-                                                onChange={onChangeInput}
-                                                name="first_name"
-                                                value={first_name}
-                                                />
+                                                    placeholder="Votre adresse email" onChange={onChangeInput}  name="email" value={email}/>
                                         </Form.Item>
-                                    </Col>
-                                    <Col md={11}>
                                         <Form.Item
                                             rules={[
                                                 {
                                                     required: true,
-                                                    message: 'Veuillez entrer le prénom(s)',
+                                                    message: 'Veuillez entrer l\'objet',
                                                 },
-                                            ]}
-                                        >
-                                            <Input  size="large" placeholder="Prénom" onChange={onChangeInput} name="last_name" value={last_name}/>
+                                            ]}>
+                                            <Input 
+                                                className="b-rounded"
+                                                size="large" 
+                                                    placeholder="Objet" onChange={onChangeInput}  name="subject" value={subject}/>
                                         </Form.Item>
-                                    </Col>
-                                </Row>
-                                <Form.Item
-                                    rules={[
-                                        {
-                                            required: true,
-                                            message: 'Veuillez entrer l\'adresse e-mail',
-                                        },
-                                    ]}>
-                                    <Input size="large" 
-                                            placeholder="E-mail" onChange={onChangeInput}  name="email" value={email}/>
-                                </Form.Item>
-                                <Form.Item
-                                    rules={[
-                                        {
-                                            required: true,
-                                            message: 'Veuillez entrer l\'objet',
-                                        },
-                                    ]}>
-                                    <Input size="large" 
-                                            placeholder="Objet" onChange={onChangeInput}  name="subject" value={subject}/>
-                                </Form.Item>
-                                <Form.Item>
-                                    <TextArea placeholder="Votre message" rows={4} onChange={onChangeInput} name="message" value={message}/>
-                                </Form.Item>
-                                <Form.Item>
-                                    <Text>Les informations recueillies à partir de ce formulaire sont enregistrées et transmises aux agents de Hicking chargés du traitement de votre message.</Text>
-                                </Form.Item>
-                                <Form.Item>
-                                    <AButton 
-                                        type="submit" 
-                                        shape="round"
-                                        style={{width:"150px"}}
-                                        onClick={handleSubmit}
-                                        >
-                                        Envoyer
-                                    </AButton>
-                                </Form.Item>
-                            </Form>
+                                        <Form.Item>
+                                            <TextArea 
+                                                className="b-rounded"
+                                                placeholder="Votre message" rows={4} onChange={onChangeInput} name="message" value={message}/>
+                                        </Form.Item>
+                                        <Form.Item>
+                                            <Text style={{
+                                                color:'#fff'
+                                            }}>Les informations seront enregistrées et transmises aux agents de Hicking chargés du traitement de votre message.</Text>
+                                        </Form.Item>
+                                        <Form.Item>
+                                            <AButton 
+                                                type="submit" 
+                                                shape="round"
+                                                style={{width:"150px"}}
+                                                onClick={handleSubmit}
+                                                >
+                                                Envoyer
+                                            </AButton>
+                                        </Form.Item>
+                                    </Form>
+                                </Col>
+                            </Row>
                         </Col>
                     </Row>
-                </Col>
-            </Row>
-            
+                </div>
             </div>
-            <FooterPage />
-            </div>
+            <FooterPage/>
+        </div>
     )
 }

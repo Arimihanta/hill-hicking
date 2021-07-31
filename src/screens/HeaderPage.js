@@ -14,39 +14,36 @@ const { primaryColor, primaryDarkColor, bodyColor } = colors
 export const HeaderPage = (props) => {
     return (
         <Header
-            className="header"
             style={{
                 background: bodyColor,
                 position: "fixed",
                 zIndex: "10",
                 width: "100%",
-                heigt:"10vh",
                 borderBottom: "1px solid #f0f0f0"
             }}
         >
             <div
-                className="logo"
+                className='logo-header'
                 style={{ color: primaryColor, fontWeight: "bold", display: "inline-block", fontSize: "18px" }}
             >
                 Hill{" "}
                 <span
                     style={{
-                        backgroundColor: "white",
+                        backgroundColor: primaryColor,
                         borderRadius: "5px",
                         padding: 4,
                         fontWeight: "bold",
-                        color: "black"
+                        color: "#fff"
                     }}
                 >
-                    Hicking
+                    Trek
                 </span>
             </div>
             <div
                 style={{
                     float: "right",
-                    height: "62px",
                     color: "white",
-                    display: "inline-block",
+                    display: "grid",
                     fontWeight: "bold"
                 }}
             >
@@ -62,7 +59,7 @@ export const HeaderPage = (props) => {
                         </Link>
                     </Button>
                     <Button className="button-menu">
-                        <Link to="/circuts">
+                        <Link to="/circuits">
                             <EnvironmentOutlined style={{ color: primaryDarkColor }} /> Circuits
                         </Link>
                     </Button>
