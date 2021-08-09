@@ -26,7 +26,7 @@ export const HeaderPage = (props) => {
                 className='logo-header'
                 style={{ color: primaryColor, fontWeight: "bold", display: "inline-block", fontSize: "18px" }}
             >
-                Hill{" "}
+                Hills{" "}
                 <span
                     style={{
                         backgroundColor: primaryColor,
