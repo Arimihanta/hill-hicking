@@ -2,7 +2,6 @@ import { Carousel,Typography , Row, Col} from 'antd';
 import {
     EyeOutlined,
     FlagOutlined,
-    FileWordOutlined,
     EnvironmentOutlined
 } from "@ant-design/icons"
 import {FooterPage} from './FooterPage'
