@@ -1,19 +1,15 @@
 import React from 'react'
 import { 
     Steps, 
-    Button, 
-    Popover,
     Row, 
     Col,
     Typography
  } from 'antd';
  import ReactMapGL,{Marker, Source, Layer} from 'react-map-gl';
- import { colors } from "../global/colors"
  import {FooterPage} from './FooterPage'
  import marker_50px from './../assets/marker_50px.png'
 const {Step} = Steps
 const { Title } = Typography
-const { primaryDarkColor } = colors
 
 const datum=[
     {
